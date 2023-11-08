@@ -58,7 +58,7 @@ function Produtos() {
                                 </button>
                             </h2>
                             <div id="collapseThree" className="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                                <div className="accordion-body">
+                                <div className="accordion-body d-flex gap-3">
                                     {
                                         produtos.map(produto => {
                                             if (produto.Categoria === 'Churros') {
