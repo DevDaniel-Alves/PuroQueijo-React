@@ -1,0 +1,9 @@
+/*.card_completo {
+    width: 15%;
+}*/
+.card_tamanhos{
+    border: 1px #E0871A solid;
+    border-radius: 8px;
+    background-color: #E0871A;
+    padding:4px;
+}
