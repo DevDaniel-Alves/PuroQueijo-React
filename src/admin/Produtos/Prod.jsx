@@ -1,3 +1,4 @@
+import "./prod.css"
 
 function Prod() {
     return (
@@ -8,36 +9,36 @@ function Prod() {
                     <section className="w-50">
                         <div className="input__dados mb-3">
                             <label for="nomeDoProduto" className="form-label">Nome do Produto</label>
-                            <input type="email" className="form-control" id="nomeDoProduto" placeholder="Nome do Produto"></input>
+                            <input type="email" className="input_name form-control" id="nomeDoProduto" placeholder="Nome do Produto"></input>
                         </div>
 
                         <div className="input__dados mb-3">
                             <label for="descricao" className="form-label">Descrição</label>
-                            <textarea class="form-control" placeholder="Descrição"></textarea>
+                            <textarea class="input_name form-control" placeholder="Descrição"></textarea>
                         </div>
 
                         <div className="input__dados mb-3">
                             <label for="urlImagem" className="form-label">Url da Imagem</label>
-                            <input type="email" className="form-control" id="urlImagem" placeholder="Url da Imagem"></input>
+                            <input type="email" className="input_name form-control" id="urlImagem" placeholder="Url da Imagem"></input>
                         </div>
                     </section>
 
                     <section className="w-50">
                         <div className="input__dados mb-3">
                             <label for="complemento" className="form-label">Complemento</label>
-                            <input type="email" className="form-control" id="complemento" placeholder="Complemento"></input>
+                            <input type="email" className="input_name form-control" id="complemento" placeholder="Complemento"></input>
                         </div>
 
                         <div className="input__dados mb-3">
                             <label for="complemento" className="form-label">Disponibilidade</label>
-                            <select class="form-select">
+                            <select class="input_select form-select">
                                 <option value="1">Disponível</option>
                                 <option value="2">Indisponível</option>
                             </select>
                         </div>
                     </section>
                 </article>
-                <button className="btn btn-info w-25 mx-auto">Enviar</button>
+                <button className="btn btn_enviar w-25 mx-auto">Enviar</button>
             </section>
         </>
     )

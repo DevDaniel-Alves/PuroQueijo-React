@@ -1,5 +1,5 @@
 .card {
-    width: 18rem;
+    max-width: 450px;
 }
 
 .accordion-button:not(.collapsed) {

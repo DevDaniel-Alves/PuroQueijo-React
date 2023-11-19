@@ -1,7 +1,7 @@
 import saitama from "../../assets/saitama.png";
 import "./Cards.css"
 
-function CardProdutos(props) {
+function CardProdutos() {
     return (
         <>
             <div className="card_completo ">

@@ -1,28 +1,33 @@
 import "./about.css"
 import missao from "../../assets/missao.png"
 import visao from "../../assets/visao.png"
+import valores from "../../assets/valores.png"
 import CardAbout from "./CardAbout"
+import sobreImage from "../../assets/sobreImage.jpg"
 
-function Sobre(){
-    return(
+
+function Sobre() {
+    return (
         <>
-                <section className="about mt-5" id="Sobre">
-                    <section className="container d-flex flex-column align-items-center gap-3 w-50">   
-                        <h1 className="mt-4 titulo"><span className="titulo__color"> Quem </span> Somos</h1>
-                        <article className="d-flex gap-3 justify-content-center sobre__texto">
-                            <p className=""> 
-                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae labore tempora, pariatur expedita quidem voluptatem laborum. Voluptates sapiente id ab necessitatibus atque eligendi sint, aut dignissimos ipsum repudiandae nulla nemo.
+            <section className="about mb-5" id="Sobre">
+                <section className="container about_container d-flex gap-5 h-100 ">
+                    <div className="w-50 d-flex justify-content-center align-items-center">
+                        <img src={sobreImage} className="about_image" alt="" />
+                    </div>
+                    <article className="d-flex flex-column justify-content-around sobre__texto w-50 mb-5">
+                        <div className="about_content">
+                            <h1 className="mt-4 titulo titulo-sobre"><span className="titulo__color "> Sobre </span> Nós</h1>
+                            <p className="mx-auto">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae labore tempora, pariatur expedita quidem voluptatem laborum. Voluptates sapiente id ab necessitatibus atque eligendi sint, aut dignissimos ipsum repudiandae nulla nemo. Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore at labore quam ipsum fugit reprehenderit quaerat reiciendis quod vitae unde quidem perspiciatis nostrum, quibusdam itaque placeat aliquam dicta ex odio. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae labore tempora, pariatur expedita quidem voluptatem laborum. Voluptates sapiente id ab necessitatibus atque eligendi sint, aut dignissimos ipsum repudiandae nulla nemo. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos repellendus rem reiciendis temporibus dolorum accusantium! Quis cum nulla tenetur consequuntur quod veritatis sed dolorem reiciendis sunt omnis nihil, dolor accusantium!
                             </p>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus reprehenderit voluptates laborum beatae dolorem repellendus animi, modi minus, dignissimos laboriosam, a consequuntur ullam vero error blanditiis veritatis cumque sint veniam!</p>
-                        </article>
-
-                        <div className="about__cards d-flex gap-5 mt-5">
-                            <CardAbout imagem={missao} titulo="Missão" texto="Fornecer produtos para alimentação com qualidade e sabor único."/>
-                            <div className="card__about"><CardAbout imagem={visao} titulo="Visão" texto="Fornecer produtos para alimentação com qualidade e sabor único."/></div>
-                            <CardAbout imagem={missao} titulo="Missão" texto="Fornecer produtos para alimentação com qualidade e sabor único."/>
-                        </div>  
-                    </section>
+                        </div>
+                        <div className="cards__sobre d-flex gap-2">
+                            <CardAbout imagem={missao} titulo="MISSÃO"/>
+                            <CardAbout imagem={visao} titulo="VISÃO"/>
+                            <CardAbout imagem={valores} titulo="VALORES"/>
+                        </div>
+                    </article>
                 </section>
+            </section>
         </>
     )
 }
