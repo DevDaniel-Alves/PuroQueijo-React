@@ -15,32 +15,38 @@ function Sidebar() {
 
                 <article className="sidebar__nav d-flex flex-column gap-3 ">
                     <NavLink className="sidebar__item d-flex gap-2 align-items-center" to="Home" >
-                        <i className='bx bx_icons bx-home'></i>
+                        <i className='bx bx-home'></i>
                         <span>Home</span>
                     </NavLink>
                     <NavLink className="sidebar__item d-flex gap-2 align-items-center" to="Empresa" >
                         <i className='bx bxs-objects-vertical-bottom'></i>
                         <span>Empresa</span>
                     </NavLink>
-                    <NavLink className="sidebar__item d-flex gap-2 align-items-center" to="Redes" >
-                        <i className='bx bx-world'></i>
-                        <span>Redes Sociais</span>
-                    </NavLink>
                     <NavLink className="sidebar__item d-flex gap-2 align-items-center" to="Produtos" >
                         <i className='bx bxs-add-to-queue'></i>
                         <span>Produtos</span>
+                    </NavLink>
+                    <NavLink className="sidebar__item d-flex gap-2 align-items-center" to="Usuario" >
+                        <i className='bx bxs-user'></i>
+                        <span>Usuarios</span>
                     </NavLink>
                     <NavLink className="sidebar__item d-flex gap-2 align-items-center" to="Publicacoes" >
                         <i className='bx bxs-purchase-tag'></i>
                         <span>Publicações</span>
                     </NavLink>
-                    <div className=" sidebar__risco"></div>
-                    <NavLink className="sidebar__item d-flex gap-2 align-items-center" to="CriarProd" >
-                        <i class='bx bxs-add-to-queue' ></i>
-                        <span>Criar novo Produto</span>
+                    <NavLink className="sidebar__item d-flex gap-2 align-items-center" to="Redes">
+                        <i className='bx bx-world'></i>
+                        <span>Social</span>
                     </NavLink>
+                    
                 </article>
-
+                <div className="d-flex h-100 gap-2">
+                        <i className='bx bxs-user-circle fs-1' ></i>
+                        <div className="user-text d-flex flex-column gap-0">
+                            <span>Administrador</span>
+                            <samp>admin@puroqueijo.com</samp>
+                        </div>
+                    </div>
             </section>
         </>
     )

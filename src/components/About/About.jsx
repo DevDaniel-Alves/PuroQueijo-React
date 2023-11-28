@@ -4,26 +4,39 @@ import visao from "../../assets/visao.png"
 import valores from "../../assets/valores.png"
 import CardAbout from "./CardAbout"
 import sobreImage from "../../assets/sobreImage.jpg"
+import axios from "axios"
+import { useState, useEffect } from "react"
 
 
 function Sobre() {
+    const [dadoSobre, setDadoSobre] = useState([])
+
+    useEffect(() => {
+        axios.get("http://localhost:3333/empresa")
+            .then((res) => {
+                console.log(res.data)
+                setDadoSobre(res.data[0])
+            })
+            .catch((err) => console.error(err))
+    }, [])
     return (
         <>
-            <section className="about mb-5" id="Sobre">
-                <section className="container about_container d-flex gap-5 h-100 ">
-                    <div className="w-50 d-flex justify-content-center align-items-center">
+            <section className="about d-flex justify-content-center align-items-center" id="Sobre">
+                <section className="container row about_container">
+                    <div className="col-5 imagem_about my-auto">
                         <img src={sobreImage} className="about_image" alt="" />
                     </div>
-                    <article className="d-flex flex-column justify-content-around sobre__texto w-50 mb-5">
+                    <article className="col-7">
+                        <h1 className="titulo titulo-sobre text-center"><span className="titulo__color "> Nossa </span> História</h1>
                         <div className="about_content">
-                            <h1 className="mt-4 titulo titulo-sobre"><span className="titulo__color "> Sobre </span> Nós</h1>
-                            <p className="mx-auto">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae labore tempora, pariatur expedita quidem voluptatem laborum. Voluptates sapiente id ab necessitatibus atque eligendi sint, aut dignissimos ipsum repudiandae nulla nemo. Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore at labore quam ipsum fugit reprehenderit quaerat reiciendis quod vitae unde quidem perspiciatis nostrum, quibusdam itaque placeat aliquam dicta ex odio. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae labore tempora, pariatur expedita quidem voluptatem laborum. Voluptates sapiente id ab necessitatibus atque eligendi sint, aut dignissimos ipsum repudiandae nulla nemo. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos repellendus rem reiciendis temporibus dolorum accusantium! Quis cum nulla tenetur consequuntur quod veritatis sed dolorem reiciendis sunt omnis nihil, dolor accusantium!
+                            <p className="mx-auto">
+                                {dadoSobre.sobre}
                             </p>
                         </div>
-                        <div className="cards__sobre d-flex gap-2">
-                            <CardAbout imagem={missao} titulo="MISSÃO"/>
-                            <CardAbout imagem={visao} titulo="VISÃO"/>
-                            <CardAbout imagem={valores} titulo="VALORES"/>
+                        <div className="cards__sobre d-flex justify-content-center gap-3  mx-auto">
+                                <CardAbout imagem={missao} titulo="MISSÃO" texto={dadoSobre.missao} />
+                                <CardAbout imagem={visao} titulo="VISÃO" texto={dadoSobre.visao} />
+                                <CardAbout imagem={valores} titulo="VALORES" texto={dadoSobre.valores} />
                         </div>
                     </article>
                 </section>

@@ -20,7 +20,6 @@ function CriarProduto() {
                         <input type="text" className="input_name form-control" id="urlFoto" placeholder="Url da Foto"></input>
                     </div>
                 </section>
-                
                 <button className="btn btn_enviar w-25 mx-auto">Adicionar</button>
             </section>
         </>

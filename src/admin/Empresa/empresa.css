@@ -1,19 +1,16 @@
-.btn_enviar{
-    background-color: #732C02;
-    color: black;
-    font-weight: 500;
+.empresa_container{
+    height: 70vh;
 }
-.btn_enviar:hover{
-    background-color: rgb(139, 53, 3)
+
+.form-dados {
+    overflow-y: auto;
 }
-.input_name{
-    width: 100%;
-    color: rgb(36, 35, 42);
-    font-size: 16px;
-    line-height: 20px;
-    border-radius: 4px;
-    padding: 8px 16px;
-    border: 2px solid transparent;
-    box-shadow: rgb(0 0 0 / 12%) 0px 1px 3px, rgb(0 0 0 / 24%) 0px 1px 2px;
-    background: rgb(251, 251, 251);
+
+.form-dados::-webkit-scrollbar{
+    width: 10px;
+}
+
+.form-dados::-webkit-scrollbar-thumb{
+    background-color: var(--Primary-color-500);
+    border-radius: 12px;
 }

@@ -16,16 +16,10 @@ function Navbar() {
                             <i className='bx bx-search-alt-2'></i>
                         </span>
                     </div>
-                    <div className="name_usuario gap-1 d-flex h-100">
-                        <i class='bx bxs-user-circle fs-1'></i>
-                        <div className="username_email d-flex flex-column">
-                            <span>Username</span>
-                            <span>exemplo@gmail.com</span>
-                        </div>
-                    </div>
-                    <Link className="btn barra__btn d-flex align-items-center gap-1" to="/">
-                        <i className='bx bx-user-pin'></i> Sair
+                    <Link className="btn btn-danger barra__btn d-flex align-items-center gap-1" to="/">
+                        <i className='bx bx-exit' ></i> <span> Sair </span>
                     </Link>
+                    
                 </div>
             </section>
         </>
